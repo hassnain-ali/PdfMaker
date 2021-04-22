@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PdfMaker.SettingsPage" 
+             Title="Application Settings">
+    <ContentPage.Content>
+        <ScrollView>
+            
+        <StackLayout Padding="15">
+            <Label Text="File Name"/>
+            <Entry x:Name="TxtDefaultFileName" Placeholder="Default Pdf File Name"/>
+            <Grid>
+                <Label Grid.Row="0" Text="Open File After Completion?"/>
+                <Switch Grid.Row="0" x:Name="SwitchAfterComplete"/>
+            </Grid>
+            <Label Text="Image Rotate"/>
+            <Entry x:Name="TxtRotation" Placeholder="Enter Image Rotation"/>
+
+            <Label Text="Image Height"/>
+            <Entry x:Name="TxtImageHeight" Placeholder="Enter Image Height"/>
+
+            <Label Text="Image Compression"/>
+            <Entry x:Name="TxtCompression" Placeholder="Image Compression Quality"/>
+
+            <Label Text="Page Size"/>
+            <Picker Title="Select Page Size" x:Name="SelectList" SelectedItem="{Binding SelectedItem,Mode=TwoWay}"></Picker>
+
+            <Label Text="Shake Speed"/>
+            <Picker Title="Select Shake Speed" x:Name="SelectList_ShakeSpeed" SelectedItem="{Binding SensorSpeedSelected,Mode=TwoWay}"></Picker>
+
+            <Button Text="Save Changes" x:Name="BtnSaveChanges" Clicked="BtnSaveChanges_Clicked"></Button>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:pages="clr-namespace:PdfMaker"
+             x:Class="PdfMaker.TabbedMainPage">
+    <TabbedPage.Title>Pdf Maker</TabbedPage.Title>
+    <!--Pages can be added as references or inline-->
+    <pages:MainPage Title="Make" />
+    <pages:MorePage Title="More"/>
+</TabbedPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PdfMaker.MainPage">
+
+    <StackLayout Padding="16">
+        <Frame BackgroundColor="#2196F3" CornerRadius="0">
+            <Label Text="Welcome to Pdf Maker!" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title"/>
+        </Frame>
+        <Label Text="Click below and select images to convert to pdf" FontSize="Micro"/>
+        <Button Text="Select images" Clicked="BtnSelect_Clicked" x:Name="btnSelect"></Button>
+        <Grid>
+            <Editor x:Name="TxtFileName" Placeholder="Enter File Name" IsVisible="false"></Editor>
+        </Grid>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Text="Cancel" x:Name="BtnCancel" IsVisible="false" Clicked="BtnCancel_Clicked"/>
+            <Button Text="Make PDF" Clicked="BtnMake_Clicked" x:Name="BtnMake" IsVisible="false" Grid.Column="1"></Button>
+
+        </Grid>
+        <!--<Button IsVisible="false" x:Name="BtnViewAll" Clicked="BtnViewAll_Clicked" Text="View Images"/>-->
+        <Label IsVisible="false" x:Name="LblTime" />
+        <ActivityIndicator x:Name="ActivityInd" IsVisible="false" IsRunning="False"/>
+    </StackLayout>
+
+</ContentPage>
